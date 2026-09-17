@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Car Configurator, step 3 of 3: the summary of your car, name, type, colour, wheels, ratings and options.">
+  <title>Summary - Car Configurator</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/car.js"></script>
+  <script defer src="js/step3.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <img class="banner" src="https://images.unsplash.com/photo-1592853625511-ad0edcc69c07?auto=format&amp;fit=crop&amp;w=1600&amp;h=400&amp;q=80" alt="" width="1600" height="400" fetchpriority="high">
+    <div class="container text-center pt-4">
+      <h1 class="display-6">Car Configurator</h1>
+      <p class="h4 fw-normal text-muted">Summary</p>
+      <nav aria-label="Steps">
+        <ol class="steps">
+          <li class="done"><a href="index.html">1. Basics</a></li>
+          <li class="done"><a href="features.html">2. Features</a></li>
+          <li class="current" aria-current="step">3. Summary</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <main class="container flex-grow-1 pb-5">
+    <section class="bg-light rounded p-4">
+      <h2 class="visually-hidden">Your car</h2>
+      <div class="row g-4">
+        <dl class="col-12 col-md-6 mb-0">
+          <dt>Full name</dt>
+          <dd id="fullName"></dd>
+          <dt>Vehicle type</dt>
+          <dd id="vehicleType"></dd>
+          <dt>Wheel size</dt>
+          <dd id="wheels"></dd>
+          <dt>Colour</dt>
+          <dd id="colour" class="mb-0"></dd>
+        </dl>
+        <div class="col-12 col-md-6">
+          <p class="mb-1">Ratings:</p>
+          <ul id="ratings"></ul>
+          <p class="mb-1">Options:</p>
+          <ul id="options" class="mb-0"></ul>
+        </div>
+      </div>
+    </section>
+    <button type="button" id="btnStartOver" class="btn btn-outline-secondary mt-3">Start over</button>
+  </main>
+  <footer class="border-top py-3 text-muted">
+    <div class="container">&copy; 2026 - Car Configurator - <a href="LICENSE">Licence</a></div>
+  </footer>
+</body>
+</html>
