@@ -1,0 +1,40 @@
+/* Bootstrap does the forms and the grid; this file adds the banner and the
+   step trail under the title. */
+.banner {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  color: #6c757d;
+}
+
+.steps .current {
+  color: #212529;
+  font-weight: 600;
+  border-bottom: 3px solid #0d6efd;
+}
+
+.steps .done a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+
+.steps .done a:hover,
+.steps .done a:focus {
+  text-decoration: underline;
+}
+
+@media (max-width: 575.98px) {
+  .banner {
+    height: 120px;
+  }
+}
