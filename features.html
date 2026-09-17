@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Car Configurator, step 2 of 3: four ratings that add up to fifty, and two or three options from the list of your vehicle type.">
+  <title>Features - Car Configurator</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script defer src="js/car.js"></script>
+  <script defer src="js/validation.js"></script>
+  <script defer src="js/step2.js"></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <header>
+    <img class="banner" src="https://images.unsplash.com/photo-1592853625511-ad0edcc69c07?auto=format&amp;fit=crop&amp;w=1600&amp;h=400&amp;q=80" alt="" width="1600" height="400" fetchpriority="high">
+    <div class="container text-center pt-4">
+      <h1 class="display-6">Car Configurator</h1>
+      <p class="h4 fw-normal text-muted">Features</p>
+      <nav aria-label="Steps">
+        <ol class="steps">
+          <li class="done"><a href="index.html">1. Basics</a></li>
+          <li class="current" aria-current="step">2. Features</li>
+          <li>3. Summary</li>
+        </ol>
+      </nav>
+    </div>
+  </header>
+  <main class="container flex-grow-1 pb-5">
+    <form id="step2" novalidate>
+      <fieldset class="card mb-3">
+        <legend class="h5 card-header bg-white">Base ratings</legend>
+        <div class="card-body">
+          <p class="text-muted">Give each rating a whole number from 5 to 15. The four ratings must add up to 50.</p>
+          <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <label for="speed" class="form-label">Speed</label>
+              <input type="number" class="form-control" id="speed" name="speed" min="5" max="15" step="1" required>
+            </div>
+            <div class="col-6 col-md-3">
+              <label for="handling" class="form-label">Handling</label>
+              <input type="number" class="form-control" id="handling" name="handling" min="5" max="15" step="1" required>
+            </div>
+            <div class="col-6 col-md-3">
+              <label for="strength" class="form-label">Strength</label>
+              <input type="number" class="form-control" id="strength" name="strength" min="5" max="15" step="1" required>
+            </div>
+            <div class="col-6 col-md-3">
+              <label for="efficiency" class="form-label">Efficiency</label>
+              <input type="number" class="form-control" id="efficiency" name="efficiency" min="5" max="15" step="1" required>
+            </div>
+          </div>
+          <p id="totalMessage" class="text-danger small mt-2 mb-0" aria-live="polite"></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="card mb-3">
+        <legend class="h5 card-header bg-white"><span id="optionsTitle">Options</span> <span class="text-muted fs-6">Choose 2 or 3 options</span></legend>
+        <div class="card-body">
+          <div id="optionsList" class="row g-2"></div>
+          <p id="optionsMessage" class="text-danger small mt-2 mb-0" aria-live="polite"></p>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">Save and continue to the summary</button>
+    </form>
+  </main>
+  <footer class="border-top py-3 text-muted">
+    <div class="container">&copy; 2026 - Car Configurator - <a href="LICENSE">Licence</a></div>
+  </footer>
+</body>
+</html>
